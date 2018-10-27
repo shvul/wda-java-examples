@@ -1,5 +1,6 @@
 package com.github.shvul.wda.examples.tests;
 
+import com.github.shvul.wda.client.driver.TVDriver.RemoteControl;
 import com.github.shvul.wda.client.element.TVElement;
 import com.github.shvul.wda.client.element.TVLocator;
 import com.github.shvul.wda.examples.support.Group;
@@ -18,6 +19,19 @@ public class NavigationTest extends BaseTest {
         Assert.assertFalse(navigationBtn.isFocused(),"Navigation button is focused, but shouldn't be.");
 
         navigationBtn.focuse();
+        Assert.assertTrue(navigationBtn.isFocused(),"Navigation button is not focused.");
+    }
+
+    @Test(groups = { Group.FULL, Group.NAVIGATION })
+    public void remoteControlTest() {
+
+        TVElement navigationBtn = driver.findElement(TVLocator.name("Navigation"));
+
+        Assert.assertFalse(navigationBtn.isFocused(),"Navigation button is focused, but shouldn't be.");
+
+        RemoteControl remoteControl = driver.getRemoteControl();
+        remoteControl.down();
+        remoteControl.down();
         Assert.assertTrue(navigationBtn.isFocused(),"Navigation button is not focused.");
     }
 
