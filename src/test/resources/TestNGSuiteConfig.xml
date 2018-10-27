@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Apple TV Test Suite">
+    <parameter name="deviceIp" value=""/> <!-- e.g, 192.168.1.1 -->
+    <parameter name="deviceId" value=""/> <!-- e.g, g248bf31a75b01d3h028d85d96e16dc931ld117d -->
+    <listeners>
+        <listener class-name="com.github.shvul.wda.examples.support.SuiteListener"/>
+    </listeners>
+    <test name="All ATV Tests">
+        <groups>
+            <run>
+                <include name="Full"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.github.shvul.wda.examples.tests.*"/>
+        </packages>
+    </test>
+</suite>
