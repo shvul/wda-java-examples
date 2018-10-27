@@ -1,8 +1,7 @@
-package com.github.shvul.wda.examples.tests;
+package com.github.shvul.wda.examples;
 
 import com.github.shvul.wda.client.element.TVElement;
 import com.github.shvul.wda.client.element.TVLocator;
-import com.github.shvul.wda.examples.support.Group;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -23,6 +22,7 @@ public class NavigationTest extends BaseTest {
 
     @Test(groups = { Group.FULL, Group.NAVIGATION })
     public void elementSelectTest() {
+
         TVElement navigationBtn = driver.findElement(TVLocator.name("Navigation"));
 
         navigationBtn.select();
