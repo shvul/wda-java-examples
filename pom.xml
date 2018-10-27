@@ -7,6 +7,18 @@
     <groupId>wda-java-examples</groupId>
     <artifactId>com.github.shvul.wda.examples</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <repositories>
         <repository>
             <id>jitpack.io</id>
@@ -17,7 +29,7 @@
         <dependency>
             <groupId>com.github.shvul</groupId>
             <artifactId>wda-java-client</artifactId>
-            <version>1.0.0-beta-2</version>
+            <version>1.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
