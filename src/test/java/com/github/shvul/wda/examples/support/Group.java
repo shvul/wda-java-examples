@@ -1,4 +1,4 @@
-package com.github.shvul.wda.examples;
+package com.github.shvul.wda.examples.support;
 
 public final class Group {
     private Group(){}
