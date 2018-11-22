@@ -11,13 +11,13 @@ Move to WebDriverAgent folder:
 ```
 cd ./WebDriverAgent
 ```
-Build carthage dependencies:
-```
-sh ./Scripts/build.sh
-```
 Switch to application-commands branch to use application install/activate/launch commands:
 ```
 git checkout application-commands
+```
+Build carthage dependencies:
+```
+sh ./Scripts/bootstrap.sh
 ```
 
 Open xcode project and sign `WebDriverAgentRunner_tvOS` target under your provisioning profile.
